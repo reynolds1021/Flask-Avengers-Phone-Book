@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Hello Avengers. Please register your phone number below.</h1>
+
+    <form action="" method = "POST">
+         {{ form.hidden_tag() }}
+        <div class = "form-group"> 
+            <fieldset>
+                {{ form.username.label }}
+                {{ form.username(class='form-control', placeholder='Name') }}
+            </fieldset>
+            <fieldset>
+                {{ form.phonenumber.label }}
+                {{ form.phonenumber(class='form-control', placeholder='Phone Number') }}
+            </fieldset>
+            
+            {{ form.submit(class='btn btn-success') }}
+        </div>
+    
+    </form>
+
+{% endblock content %}    
+    
